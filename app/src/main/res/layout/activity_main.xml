@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:gravity="center_horizontal"
-        android:text="3"
+        android:text="0"
         android:id="@+id/team_a_score"/>
 
     <Button
