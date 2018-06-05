@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     int scoreTeamA = 0;
     int scoreTeamB = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the given score for Team B.
      */
@@ -31,15 +33,17 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Team A Buttons.
      */
-    public void addOnePointA (View view){
+    public void addOnePointA(View view) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
-    public void addTwoPointA (View view){
+
+    public void addTwoPointA(View view) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
-    public void addThreePointA(View view){
+
+    public void addThreePointA(View view) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
@@ -48,23 +52,27 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Team B Buttons.
      */
-    public void addOnePointB (View view){
+    public void addOnePointB(View view) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
-    public void addTwoPointB(View view){
+
+    public void addTwoPointB(View view) {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
-    public void addThreePointB(View view){
+
+    public void addThreePointB(View view) {
         scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
 
     // Reset Function
 
-    public void resetScore (){
+    public void resetScore(View view) {
         scoreTeamA = 0;
         scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 }
